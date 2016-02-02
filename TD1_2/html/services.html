@@ -1,0 +1,28 @@
+<html ng-app="Services">
+  <head>
+    <meta charset = "UTF-8"/>
+    <script src="../js/angular.min.js"></script>
+  	<script src="../js/app.js"></script>
+  	<script src="../js/controller.js"></script>
+    <link rel="stylesheet" href="../css/services.css"/>
+  </head>
+  <body ng-controller="controllerServices as servs" class="background">
+    <table class="align titre ligneService">
+      <tr>
+        <td>Choisissez les services à inclure</td>
+      </tr>
+      <tr class="textTitre">
+        <td>services sélectionnés</td>
+      </tr>
+    </table>
+    <div ng-repeat="service in servs.services" >
+      <table class="align tableauService ligneService" ng-class="{active : service.active==true, inactive : service.active==false}" ng-click="servs.change(service)">
+          <tr class="ligneService">
+            <td class="textNom">{{service.name}}</td>
+            <td class="textPrix">{{service.price | currency:"&euro;" }}</td>
+          </tr>
+        </table>
+    </div>
+    <hr class="ligneService"/>
+  </body>
+</html>

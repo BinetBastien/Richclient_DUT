@@ -1,0 +1,41 @@
+<html ng-app="myApp">
+<head>
+	<script
+	src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/myController.js"></script>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="hello.css" type="text/css">
+</head>
+<body ng-controller="myController as ctrl">
+
+	<table id="tableau">
+
+		<tr>
+			<th id="titre">Ex 1 : Note Application</th>
+		</tr>
+
+		<tr>
+			<td id="note">Note:</td>
+		</tr>
+
+		<tr>
+			<td id="area"><textarea ng-model="ctrl.messageNote" maxlength="100" id="text"> </textarea></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="Enregistrer" ng-click="ctrl.saveFunc()" id="bouton"></input>
+			<input type="button" value="Effacer" ng-click="ctrl.clear()" id="bouton"></input></td>
+		</tr>
+
+		<tr>
+			<td><p ng-model="status" id="status" ng-class="{'alert-danger' : (ctrl.count()<10), 'alert-warning' : (ctrl.count()<50 && ctrl.count()>=10), 'alert-normal' : (ctrl.count()>50)}" >Il reste {{ctrl.count()}} caracteres</p><td>
+		</tr>
+
+		<tr>
+			<td><p id="info" class="alert-normal" ng-hide="ctrl.info==''" ng-show="ctrl.info!=''"	>{{ctrl.info}}</p></td>
+		</tr>
+	</table>
+{{ctrl.info}}
+</body>
+</html>

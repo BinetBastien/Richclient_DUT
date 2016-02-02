@@ -1,0 +1,48 @@
+#tableau{
+  border-style: solid;
+  border-color: #357AB7;
+  border-width: 1px;
+  border-radius: 3px;
+  width: 75%;
+}
+
+#titre{
+  background: #357AB7;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  border-collapse: collapse;
+}
+
+#note{
+  font-weight: bold;
+}
+
+#text{
+  width: 100%;
+  border-collapse: separate;
+}
+
+#area{
+  width:100%;
+}
+
+#bouton{
+  border-style: none;
+  background: #357AB7;
+  color : white;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.alert-danger{
+  background: red;
+}
+
+.alert-warning{
+  background: orange;
+}
+
+.alert-normal{
+  background: green;
+}

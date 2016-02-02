@@ -1,0 +1,53 @@
+.tableauService{
+  background : darkgrey;
+  border-radius : 5px;
+}
+
+.align{
+margin : auto;
+margin-bottom : 10px;
+padding : 5px;
+}
+
+.textNom{
+  font-weight : bold;
+  text-align : left;
+  width : 70%;
+}
+
+.textPrix{
+  text-align: right;
+  width : 30%;
+}
+
+.ligneService{
+  width : 500px;
+}
+
+.active{
+  background : lightgreen;
+  color : black;
+}
+
+.inactive{
+  background : darkgrey;
+  color : black;
+}
+
+table:hover{
+  cursor: pointer;
+}
+
+.titre{
+  background: #DFF2FF;
+  border-radius: 5px;
+  color:#22597C;
+}
+
+.textTitre{
+  font-weight : bold;
+}
+
+.background{
+  background: black;
+}
