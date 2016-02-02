@@ -12,7 +12,7 @@
         <td>Choisissez les services à inclure</td>
       </tr>
       <tr class="textTitre">
-        <td>services sélectionnés</td>
+        <td>{{servs.nbServs}} services sélectionnés</td>
       </tr>
     </table>
     <div ng-repeat="service in servs.services" >
@@ -24,5 +24,11 @@
         </table>
     </div>
     <hr class="ligneService"/>
+    <table class="total align ligneService">
+      <tr>
+        <td class=".textNom">Total :</td>
+        <td class="textPrix">{{servs.calcTotal() | currency:"&euro;"}}</td>
+      </tr>
+    </table>
   </body>
 </html>
